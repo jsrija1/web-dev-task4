@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney+ Hotstar</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #000;
+            padding: 10px;
+            text-align: left;
+        }
+        .nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .nav a:hover {
+            color: #ccc;
+        }
+        .search-container {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 10px;
+            background-color: #333;
+            padding: 10px;
+            z-index: 1;
+        }
+        .search-container input[type=text] {
+            padding: 6px;
+            border: none;
+            background-color: #444;
+            color: #fff;
+        }
+        .movie-container {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            overflow-x: auto;
+            white-space: nowrap;
+            text-align: center;
+        }
+        .movie-container img {
+            height: 300px; /* Adjust this value to change the height of the images */
+            margin: 0 50px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        .movie-container img:hover {
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <img src="posters/disneyhotstar.jpg" alt="Disney+ Hotstar" height="50px">
+</div>
+
+<div class="nav">
+    <a href="#">My Space</a>
+    <a href="#" onclick="toggleSearch()">Search</a>
+    <a href="#">Home</a>
+    <a href="#">TV</a>
+    <a href="#">Movies</a>
+    <a href="#">Sports</a>
+    <a href="#">Categories</a>
+</div>
+
+<div id="searchContainer" class="search-container">
+    <input type="text" placeholder="Search...">
+</div>
+
+<div class="movie-container">
+    <img src="posters/hridayam.jpg" alt="Hridayam">
+    <img src="posters/hanuman.jpg" alt="Hanuman">
+    <img src="posters/heaven.jpg" alt="Heaven">
+    <img src="posters/glass.jpg" alt="Glass">
+</div>
+
+<script>
+    function toggleSearch() {
+        var searchContainer = document.getElementById('searchContainer');
+        if (searchContainer.style.display === 'none' || searchContainer.style.display === '') {
+            searchContainer.style.display = 'block';
+        } else {
+            searchContainer.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>
